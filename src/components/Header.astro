@@ -1,0 +1,50 @@
+---
+type Props = { currentPath: string };
+const { currentPath } = Astro.props;
+
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+];
+
+const isActive = (href: string) =>
+  href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+---
+
+<header class="border-b border-black/10">
+  <div class="container-max flex items-center justify-between py-6">
+    <a href="/" class="group inline-flex items-baseline gap-2">
+      <span class="text-xl font-bold tracking-tight">Pete McPherson</span>
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-black/60"
+        >Portfolio</span
+      >
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="flex items-center gap-4 sm:gap-6">
+        {
+          nav.map(({ href, label }) => {
+            const active = isActive(href);
+            return (
+              <li>
+                <a
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  class:list={[
+                    "text-sm font-medium transition-colors",
+                    active ? "text-accent" : "text-black/80 hover:text-black",
+                    "focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-white rounded-sm",
+                  ]}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
