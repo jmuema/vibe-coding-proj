@@ -1,10 +1,10 @@
-# AGENTS.md — Pete McPherson Portfolio (Astro)
+# AGENTS.md — Joseph muema Portfolio (Astro)
 
-This repo is a minimal, bold, high-performance portfolio site for **Pete McPherson** built with **Astro** + **Tailwind CSS** and designed for **Cloudflare Pages**.
+This repo is a minimal, bold, high-performance portfolio site for **Joseph muema** built with **Astro** + **Tailwind CSS** and designed for **Cloudflare Pages**.
 
 ## Product goals
 
-- **Educate** visitors about Pete (placeholder content for now).
+- **Educate** visitors about Joseph (placeholder content for now).
 - Drive a primary action: **newsletter signup** via a prominent CTA form on every page.
 - Keep the site **fast** (static output, minimal JS).
 

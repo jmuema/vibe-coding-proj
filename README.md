@@ -1,4 +1,4 @@
-# Pete McPherson — Portfolio (Placeholder)
+# Joseph muema — Portfolio (Placeholder)
 
 Minimal, bold, static portfolio site built with Astro + Tailwind CSS.
 
